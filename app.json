@@ -2,7 +2,7 @@
   "expo": {
     "name": "UpWell",
     "slug": "upwell",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "orientation": "portrait",
     "icon": "./assets/main-icon.png",
     "userInterfaceStyle": "dark",
@@ -20,11 +20,11 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/main-icon.png",
-        "backgroundColor": "#0A0A0F"
+        "backgroundColor": "#FFFFFF"
       },
       "edgeToEdgeEnabled": true,
       "package": "com.upwell.app",
-      "versionCode": 2
+      "versionCode": 3
     },
     "web": {
       "favicon": "./assets/main-icon.png"
