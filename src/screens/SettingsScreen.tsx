@@ -18,7 +18,7 @@ import * as FileSystem from 'expo-file-system';
 import { StorageAccessFramework } from 'expo-file-system/legacy';
 import * as DocumentPicker from 'expo-document-picker';
 import * as Sharing from 'expo-sharing';
-import { Spacing, FontSize, FontWeight, Currency, BorderRadius, PremiumDarkTheme, DarkTheme } from '../constants/theme';
+import { Spacing, FontSize, FontWeight, Currency, BorderRadius, PremiumDarkTheme, PremiumLightTheme, DarkTheme } from '../constants/theme';
 import { useApp } from '../context/AppContext';
 import { useTheme } from '../context/ThemeContext';
 import { Button, Card } from '../components';
@@ -360,10 +360,10 @@ export function SettingsScreen({ onClose }: SettingsScreenProps) {
                                     <View style={[styles.colorSchemePreview, { backgroundColor: colors.surfaceLighter, borderRadius: styleConfig.borderRadius.sm }]}>
                                         {option === 'premium' ? (
                                             <>
-                                                <View style={[styles.colorSchemeDot, { backgroundColor: colors.primary }]} />
-                                                <View style={[styles.colorSchemeDot, { backgroundColor: colors.textMuted }]} />
-                                                <View style={[styles.colorSchemeDot, { backgroundColor: colors.primary }]} />
-                                                <View style={[styles.colorSchemeDot, { backgroundColor: colors.textMuted }]} />
+                                                <View style={[styles.colorSchemeDot, { backgroundColor: PremiumLightTheme.primary }]} />
+                                                <View style={[styles.colorSchemeDot, { backgroundColor: PremiumLightTheme.textMuted }]} />
+                                                <View style={[styles.colorSchemeDot, { backgroundColor: PremiumLightTheme.primary }]} />
+                                                <View style={[styles.colorSchemeDot, { backgroundColor: PremiumLightTheme.textMuted }]} />
                                             </>
                                         ) : (
                                             <>
@@ -640,7 +640,7 @@ export function SettingsScreen({ onClose }: SettingsScreenProps) {
                 <View style={styles.section}>
                     <Text style={[styles.sectionTitle, { color: colors.error }]}>Danger Zone</Text>
                     <TouchableOpacity
-                        style={[styles.dangerButton, { borderColor: colors.error, borderRadius: styleConfig.borderRadius.md }]}
+                        style={[styles.dangerButton, { borderColor: colors.error, backgroundColor: colors.error + '15', borderRadius: styleConfig.borderRadius.md }]}
                         onPress={handleResetData}
                     >
                         <Text style={[styles.dangerButtonText, { color: colors.error }]}>Reset All Data</Text>
